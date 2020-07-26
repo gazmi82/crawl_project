@@ -1,0 +1,22 @@
+{
+  "name": "crawl_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+ "crawl-e/v0.5.0": "git+ssh://git@bitbucket.org/cinepass/crawl-e.git"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gazmi82/crawl_project.git"
+  },
+  "author": "Gazmir Sulcaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gazmi82/crawl_project/issues"
+  },
+  "homepage": "https://github.com/gazmi82/crawl_project#readme"
+}
