@@ -1,0 +1,22 @@
+{
+  "name": "crawl-e-documentation",
+  "authors": [
+    "Martin Stemmle <martin@cinepass.de>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "async": "^2.6.0",
+    "underscore": "^1.9.1",
+    "vue": "^2.5.17"
+  }
+}

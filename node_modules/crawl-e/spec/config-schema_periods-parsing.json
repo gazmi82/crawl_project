@@ -1,0 +1,61 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_periods-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for auditoria parsing",
+  "type": "object",
+  "required": [ "box" ],
+  "allOf": [
+    {
+      "properties": {
+        "box": {
+          "type": "string",
+          "description": "Selector for period boxes",
+          "default": "body"
+        },
+        "datesParser": {
+          "type": "ValueGrabber",
+          "description": "Custom value grabbing function to parse a list of dates covering the current programm period, e.g. a play week"
+        }
+      }
+    },
+    {
+      "$ref": "config-schema_date-string-parsing.json"
+    },
+    {
+      "properties": {
+        "movies": {
+          "description": "Configuration for parsing movies inside each boxes",
+          "$ref": "config-schema_movies-parsing.json"
+        },
+        "showtimes": {
+          "description": "Configuration for parsing showtimes inside each boxes",
+          "$ref": "config-schema_showtimes-parsing.json"
+        },
+        "dates": {
+          "description": "Configuration for parsing dates inside each boxes",
+          "$ref": "config-schema_dates-parsing.json"
+        },
+        "auditoria": {
+          "description": "Configuration for parsing auditoria inside each boxes",
+          "$ref": "config-schema_auditoria-parsing.json"
+        },
+        "versions": {
+          "description": "Configuration for parsing versions inside each boxes",
+          "$ref": "config-schema_versions-parsing.json"
+        },
+        "table": {
+          "description": "Configuration for parsing showtimes tables inside each boxes",
+          "$ref": "config-schema_showtimes-table-parsing.json"
+        },
+        "tabs": {
+          "description": "Configuration for parsing tabs inside each boxes",
+          "$ref": "config-schema_tabs-parsing.json"
+        },
+        "forEach": {
+          "description": "Configuration for iterating arbitray boxes inside a movie box",
+          "$ref": "config-schema_forEach-parsing.json"
+        }    
+      }
+    }
+  ]  
+}

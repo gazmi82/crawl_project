@@ -1,0 +1,19 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/datepage-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "date": {
+      "$ref": "Moment",
+      "description": "The pages date as [momentjs](http://momentjs.com/) object"
+    },
+    "href": {
+      "description": "The date's href, which should contain a path string relative to the webiste's base url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "href"
+  ],
+  "type": "object"
+}

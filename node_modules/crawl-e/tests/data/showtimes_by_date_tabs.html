@@ -1,0 +1,70 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body class="" style="padding-bottom:300px;">
+
+	<h1>Showtimes by Date Tabs</h1>
+
+	<div class="container lx">
+		<div id="tabs"">
+			<ul class="buttons tabs">
+				<li><a href="#tab-1" class="date">09.04.2019</a></li>
+				<li><a href="#tab-2" class="date">10.04.2019</a></li>
+				<li><a href="#tab-3" class="date">11.04.2019</a></li>
+			</ul>
+			<div id="tab-1" class="tabItem">
+				<div class="movies">
+					<div class="movie">
+						<h2 class="title">Scary Foovie 2</h2>
+						<div class="showtimes">
+							<ul class="plain">
+								<li class="showtime">17:30</li>
+								<li class="showtime">20:30</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tab-2" class="tabItem">
+				<div class="movies">
+					<div class="movie">
+						<h2 class="title">Scary Foovie 2</h2>
+						<div class="showtimes">
+							<ul class="plain">
+								<li class="showtime">20:30</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tab-3" class="tabItem">
+				<p>no showtimes at this day</p>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#tabs .tabItem').hide(); // Hide all divs
+				$('#tabs .tabItem:first').show(); // Show the first div
+				$('#tabs ul li:first').addClass('active'); // Set the class of the first link to active
+				$('#tabs ul li a').click(function () { //When any link is clicked
+					$('#tabs ul li').removeClass('active'); // Remove active class from all links
+					$(this).parent().addClass('active'); //Set clicked link class to active
+
+					var currentTab = $(this).attr('href'); // Set variable currentTab to value of href attribute of clicked link
+					$('#tabs .tabItem').hide(); // Hide all divs
+					$(currentTab).show(); // Show div with id equal to variable currentTab
+
+					return false;
+				});
+			});
+		</script>
+
+	</div>
+</body>
+
+</html>

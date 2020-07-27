@@ -1,0 +1,211 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="lx">
+    <h1>Simple Dates Tables</h1>
+    <table id="dates" border="1">
+      <thead>
+        <tr>
+          <td class="date">01.02.2018</td>
+          <td class="date">02.02.2018</td>
+          <td class="date">03.02.2018</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="showtime">20:15</span>
+          </td>
+          <td>
+            <span class="showtime">20:15</span>
+          </td>
+          <td>
+            <span class="showtime">17:30</span>
+            <span class="showtime">20:15</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>Dates with Movie Title in Header Column</h1>
+    <table id="dates_movies" border="1">
+      <thead>
+        <tr>
+          <td>*</td>
+          <td class="date">01.03.2018</td>
+          <td class="date">02.03.2018</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="movie">
+            Scary Foovie 2
+          </td>
+          <td>
+            <span class="showtime">20:15</span>
+          </td>
+          <td>
+            <span class="showtime">17:30</span>
+            <span class="showtime">20:15</span>
+          </td>
+        </tr>
+        <tr>
+        <td class="movie">
+            Star Wars
+          </td>
+          <td>-</td>
+          <td>
+            <span class="showtime">22:30</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h1>Dates with Movie Title in Header Column - with <code>colspan</code></h1>
+    <table id="colspan" border="1">
+      <thead>
+        <tr>
+          <td colspan="2" style="text-align: center">–</td>
+          <td class="date">01.03.2018</td>
+          <td class="date">02.03.2018</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="movie"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/tSGWhSResV2Cnqqr91TGKyZzf79.jpg" width="80"></td>
+          <td class="movie">
+            Scary Foovie 2
+          </td>
+          <td>
+            <span class="showtime">20:15</span>
+          </td>
+          <td>
+            <span class="showtime">17:30</span>
+            <span class="showtime">20:15</span>
+          </td>
+        </tr>        
+      </tbody>
+    </table>
+
+    <h1>Movie in Content Cells</h1>
+    <table id="times_dates" border="1">
+      <thead>
+        <tr>
+          <td>*</td>
+          <td class="time">17:30</td>
+          <td class="time">20:15</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="date">01.04.2018</td>
+          <td>-</td>
+          <td><i class="movie">Scary Foovie 2</i></td>
+        </tr>
+        <tr>
+          <td class="date">02.04.2018</td>
+          <td><i class="movie">Scary Foovie 2</i></td>
+          <td><i class="movie">Scary Foovie 2</i></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>Table inside Movie box</h1>
+    <div class="movie movieBox">
+      <h2>Scary Foovie 2</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <td class="date">01.02.2018</td>
+              <td class="date">02.02.2018</td>
+              <td class="date">03.02.2018</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="showtime">20:15</span>
+              </td>
+              <td>
+                <span class="showtime">20:15</span>
+              </td>
+              <td>
+                <span class="showtime">17:30</span>
+                <span class="showtime">20:15</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <h1>Table inside Movie box - Dates with Auditorium in Header Column</h1>
+    <div class="movie movieBox">
+      <h2>Scary Foovie 2</h2>
+      <table id="dates_auditoria" border="1">
+        <thead>
+          <tr>
+            <td>*</td>
+            <td class="date">01.03.2018</td>
+            <td class="date">02.03.2018</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="auditorium">
+              Kino 1
+            </td>
+            <td>
+              <span class="showtime">20:15</span>
+            </td>
+            <td>
+              <span class="showtime">17:30</span>
+              <span class="showtime">20:15</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="auditorium">
+               Kino 2
+            </td>
+            <td>-</td>
+            <td>
+              <span class="showtime">22:30</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <h1>Simple Tables with to large <code>colspan</code></h1>
+    <table id="colspan-wrong" border="1">
+      <thead>
+        <tr>
+          <td class="date">01.02.2018</td>
+          <td class="date">02.02.2018</td>
+          <td class="date">03.02.2018</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="7"><code>colspan="7"</code></td>
+        </tr>
+        <tr>
+          <tr>
+            <td>
+              <span class="showtime">20:15</span>
+            </td>
+            <td>
+              <span class="showtime">20:15</span>
+            </td>
+            <td>
+              <span class="showtime">17:30</span>
+              <span class="showtime">20:15</span>
+            </td>
+          </tr>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

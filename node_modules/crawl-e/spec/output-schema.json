@@ -1,0 +1,26 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/output-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Output JSON Schema",
+  "type": "object",
+  "properties": {
+    "crawler": {
+      "type": "object",
+      "properies": {
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "cinema": {
+      "type": "object"
+    },
+    "showtimes": {
+      "type": "array",
+      "description": "Array of showtimes",
+      "items": {
+        "$ref": "output-schema_showtime.json"
+      }
+    }
+  }
+}

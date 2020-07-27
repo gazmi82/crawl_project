@@ -1,0 +1,76 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_showtimes-table-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Generic Config Schema for parsing tables",
+  "type": "object",
+  "required": [
+    "selector",
+    "headerRow",
+    "cells"
+  ],
+  "properties": {
+    "selector": {
+      "type": "string",
+      "description": "jQuery selector addressing the table to parse"
+    },
+    "headerRow": {
+      "type": "object",
+      "description": "Box parsing config for the cells of a tables header row",
+      "allOf": [
+        {
+          "properties": {
+            "offset": {
+              "type": "integer",
+              "description": "Offset for the header row from the top",
+              "default": 0
+            }
+          }
+        },
+        {
+          "$ref": "config-schema_showtimes-table-header-parsing.json"
+        }        
+      ]
+    },
+    "headerColumn": {
+      "type": "object",
+      "description": "Box parsing config for the cells of a tables header column",
+      "allOf": [
+        {
+          "properties": {
+            "offset": {
+              "type": "integer",
+              "description": "Offset for the header column from the left",
+              "default": 0
+            }
+          }
+        },
+        {
+          "$ref": "config-schema_showtimes-table-header-parsing.json"
+        }
+      ]
+    },
+    "cells": {
+      "type": "object",
+      "description": "Box parsing config for the cells of the tables context area",
+      "properties": {
+        "filter": {
+          "description": "Filter function for excluding cells",
+          "default": "empty cells filter",
+          "typeof": "function"
+        },
+        "rowLimit": {
+          "type": "number",
+          "description": "If a limit count is given, no more than that many content rows will be parsed"
+        },
+        "columnLimit": {
+          "type": "number",
+          "description": "If a limit count is given, no more than that many content columns will be parsed"
+        },
+        "showtimes": {
+          "description": "Configuration for parsing showtimes inside table's content cell",
+          "$ref": "config-schema_showtimes-parsing.json"
+        }
+      }
+    }
+  }
+}

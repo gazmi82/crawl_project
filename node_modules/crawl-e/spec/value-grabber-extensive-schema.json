@@ -1,0 +1,23 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/value-grabber-extensive-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Value Schema",
+  "type": "object",
+  "required": [
+    "selector"
+  ],
+  "properties": {
+    "selector": {
+      "type": ["string", "null"],
+      "description": "selector addressing the node"
+    },
+    "attribute": {
+      "type": ["string", "null"],
+      "description": "attribute of the node that hold the value, defaults to the node's text"
+    },
+    "mapper": {
+      "typeof": ["function", "null"],
+      "description": "function to post-process the value, defaults to `value => value.trim()`"
+    }
+  } 
+}

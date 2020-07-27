@@ -1,0 +1,30 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/dates-parsing-config.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "compoundSeparator": {
+      "description": "string or regex pattern to find a list of dates",
+      "type": "string"
+    },
+    "dateFormat": {
+      "description": "format for parsing date sub-strings",
+      "type": "string"
+    },
+    "dateLocale": {
+      "description": "locale for parsing the date with moment, defaults to `'en'`",
+      "type": "string"
+    },
+    "dateRegexPattern": {
+      "description": "regular expression to find dates, will be inferred from `dateFormat` if omitted",
+      "type": "string"
+    },
+    "rangeSeparator": {
+      "description": "string or regex pattern to find a date range",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dateFormat"
+  ],
+  "type": "object"
+}

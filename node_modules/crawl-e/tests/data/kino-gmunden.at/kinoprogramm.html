@@ -1,0 +1,353 @@
+<style>
+#res1{
+background-color:#A56363;
+width: 300px;
+padding: 8px;
+color: #fff;
+height:200px;
+display:none;
+}
+#ajax_response{
+width: 171px;
+margin-left: 75px;
+background-color: #fff;
+margin-top: -15px;
+}
+pure-table{border-collapse:collapse;border-spacing:0;empty-cells:show;border:1px solid #cbcbcb}.pure-table caption{color:#000;font:italic 85%/1 arial,sans-serif;padding:1em 0;text-align:center}.pure-table td,.pure-table th{border-left:1px solid #cbcbcb;border-width:0 0 0 1px;font-size:inherit;margin:0;overflow:visible;padding:6px 12px}.pure-table td:first-child,.pure-table th:first-child{border-left-width:0}.pure-table thead{background:#e0e0e0;color:#000;text-align:left;vertical-align:bottom}.pure-table td{background-color:transparent}.pure-table-odd td{background-color:#f2f2f2}.pure-table-striped tr:nth-child(2n-1) td{background-color:#f2f2f2}.pure-table-bordered td{border-bottom:1px solid #cbcbcb}.pure-table-bordered tbody>tr:last-child td,.pure-table-horizontal tbody>tr:last-child td{border-bottom-width:0}.pure-table-horizontal td,.pure-table-horizontal th{border-width:0 0 1px;border-bottom:1px solid #cbcbcb}.pure-table-horizontal tbody>tr:last-child td{border-bottom-width:0}
+</style> 
+<link rel="stylesheet" href="http://www.kino-gmunden.at/wp-content/plugins/FilmNews/js/jquery.ui.datepicker.css">
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.3/jquery.min.js"></script>
+ <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy'});
+  });
+  </script>
+</table>
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width">-->
+	<title>film | KINO GMUNDEN</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://www.kino-gmunden.at/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://www.kino-gmunden.at/wp-content/themes/king/js/html5.js"></script>
+	<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="KINO GMUNDEN &raquo; Feed" href="http://www.kino-gmunden.at/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="KINO GMUNDEN &raquo; Comments Feed" href="http://www.kino-gmunden.at/?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title="KINO GMUNDEN &raquo; film Comments Feed" href="http://www.kino-gmunden.at/?feed=rss2&#038;page_id=55" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.kino-gmunden.at/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://www.kino-gmunden.at/wp-content/themes/king/fonts/genericons.css?ver=2.09' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-style-css'  href='http://www.kino-gmunden.at/wp-content/themes/king/style.css?ver=2013-07-18' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://www.kino-gmunden.at/wp-content/themes/king/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://www.kino-gmunden.at/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://www.kino-gmunden.at/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.kino-gmunden.at/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.kino-gmunden.at/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Kontakt Kino Gmunden' href='http://www.kino-gmunden.at/?page_id=50' />
+<link rel='next' title='News2' href='http://www.kino-gmunden.at/?page_id=69' />
+<meta name="generator" content="WordPress 3.9.22" />
+<link rel='canonical' href='http://www.kino-gmunden.at/?page_id=55' />
+<link rel='shortlink' href='http://www.kino-gmunden.at/?p=55' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(http://www.kino-gmunden.at/wp-content/themes/king/images/headers/circle.png) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+		</style>
+	
+ <link rel="shortcut icon" href="http://www.kino-gmunden.at/wp-content/themes/king/images/favicon.ico"  type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="http://www.kino-gmunden.at/wp-content/themes/king/js/libs/modernizr-2.6.2.min.js"></script>
+<script src="http://www.kino-gmunden.at/wp-content/themes/king/js/libs/jquery-1.9.0.min.js"></script>
+<script src="http://www.kino-gmunden.at/wp-content/themes/king/js/libs/bjqs-1.3.js"></script>
+<script src="http://www.kino-gmunden.at/wp-content/themes/king/js/script.js"></script>
+<script> 
+jQuery.noConflict();
+jQuery(document).ready(function() {
+});
+</script>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "6cb823fc-7dff-4209-b26f-ecd1a8256b05", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+</head>
+
+<body class="page page-id-55 page-template page-template-film-php single-author">
+		<div class="main">
+    	<header>
+        	<div class="logo">
+            	<a href="http://www.kino-gmunden.at"><img src="http://www.kino-gmunden.at/wp-content/themes/king/images/logo.png"  alt=""/></a>
+            </div>
+            
+            
+            
+            <div class="number_wrap">
+            <span><a href="https://www.facebook.com/pages/Kino-Gmunden/126813517414859?fref=ts" target="_blank"><img src="http://www.kino-gmunden.at/wp-content/themes/king/images/fb_icon.jpg"   alt="Facebook"/></a></span>
+                <p class="number">Reservierungen unter:</p> <div class="menu-menu-contact-container"><ul id="menu-menu-contact" class="menu"><li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="#">0676 / 88 794 505</a></li>
+</ul></div>            </div>    
+                
+                
+          <nav>
+            	<div class="dropMenu_icon">
+                
+           	  		<img src="http://www.kino-gmunden.at/wp-content/themes/king/images/droMenu_icon.png" width="113" height="30"  alt=""/>
+                </div> 
+            
+          <div class="menu-menu-top-container"><ul id="menu-menu-top" class="menu"><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="http://www.kino-gmunden.at/?page_id=27&#038;page=-1">Kinoprogramm</a></li>
+<li id="menu-item-905" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-905"><a href="#">Kinoinfos</a>
+<ul class="sub-menu">
+	<li id="menu-item-860" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-860"><a href="http://www.kino-gmunden.at/?page_id=851">Zeiten &#038; Preise</a></li>
+	<li id="menu-item-858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-858"><a href="http://www.kino-gmunden.at/?page_id=855">Gutscheine</a></li>
+	<li id="menu-item-859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-859"><a href="http://www.kino-gmunden.at/?page_id=853">Kindergeburtstag</a></li>
+</ul>
+</li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10"><a href="#">Über uns</a>
+<ul class="sub-menu">
+	<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="http://www.kino-gmunden.at/?page_id=75">Das Kino</a></li>
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="http://www.kino-gmunden.at/?page_id=79">Anfahrt</a></li>
+</ul>
+</li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://www.kino-gmunden.at/?page_id=50">Kontakt</a></li>
+</ul></div></nav>
+               
+        </header>
+	
+        <div class="date_nav">
+        	<ul>
+            	<li><a href='?page_id=27&page=-1' style='font-weight:600;'>Kino heute</a></li>
+                <li><a href='?page_id=55&dt=13-01-2018&page=-1'>13-01-2018</a></li>
+                <li><a href='?page_id=55&dt=14-01-2018&page=-1'>14-01-2018</a></li>
+                <li><a href='?page_id=55&dt=15-01-2018&page=-1'>15-01-2018</a></li>
+                <li><a href='?page_id=55&dt=16-01-2018&page=-1'>16-01-2018</a></li>
+                <li><a href='?page_id=55&dt=17-01-2018&page=-1'>17-01-2018</a></li>
+                <li><a href='?page_id=55&dt=18-01-2018&page=-1'>18-01-2018</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+  
+
+
+
+
+
+
+ 
+       
+   <section class="overview">
+      <div class="lonelaner">  
+       <div class="overview_img">
+       		 <img src='./wp-content/plugins/Film Details Plugin/images/show.jpg' width='254' height='378'>        </div>
+        <div class="over_view_content">
+        <h1>Greatest Showman</h1>
+        <p style="margin-bottom:10px">Drama, Musical | 139 Minuten | Deutsch | ab 6 Jahren   | Digital  | ab 15-01-2018</p>
+        
+        <div style="float:left;">
+                    	<p><span>Darsteller : </span>
+                Hugh Jackman, Michelle Williams, Zac Efron, Zendaya , Rebecca Ferguson, Paul Sparks, Gayle Rankin </p>
+                         
+            <br/>
+            <p><span>Regie : </span>
+                Michael Gracey</p>
+            
+        </div>
+        <div style="float:left;margin-top: 3%;">
+        	<p style="text-align:justify;"><span>Beschreibung : </span>
+                GREATEST SHOWMAN ist ein kühnes, mitreißendes Musical, das die Geburt des Showbusiness feiert und das wunderbare Staunen, das uns erfüllt, wenn Träume wahr werden. Inspiriert von P.T. Barnums Ambition und Phantasie erzählt GREATEST SHOWMAN die Geschichte eines Visionärs, der aus dem Nichts kam und ein faszinierendes Spektakel erschuf, das zu einer weltweiten Sensation wurde. Regie Neuentdeckung Michael Gracey hat seinen Film GREATEST SHOWMAN mit Herz, Talent und großem Können inszeniert, die Songs stammen von den Oscar®-Preisträgern Benji Pasek und Justin Paul (LA LA LAND).</p>
+           
+        </div>
+        <div class="clear"></div>
+         
+         <p><span>Beginnzeiten heute:</span></p>
+       <p class='time'>15-01-2018 - 20:30</p>     </br>    <div>
+         	<div class="fb-like" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+         </div>
+
+       
+        
+       <div style="width:100px;height:15px;margin-top:30px;">
+<span class='st_sharethis' style="float: left;display: block;height: 16px;width: 16px;"></span><span class='st_facebook' style="float: left;display: block;height: 16px;width: 16px;margin-left:10px;"></span><span class='st_email' style="float: left;display: block;height: 16px;width: 16px;margin-top:-12px;margin-left:10px;"></span>
+         </div>
+
+        </div>
+       </div>
+       <div class="lonelaner_trailer">
+                      <div class="grey">
+       		<h2 style="color:#fff;"><a href='https://www.youtube.com/watch?v=x3c2_PKCya4' target='_blank'><font color="#fff">Zum Trailer</font></a></h2>
+</div>
+                  			        		
+      		 <div class="yellow">
+      		 	<p>
+      	 			Ticket-Reservierungen unter:
+	   				<div class="menu-menu-contact-container"><ul id="menu-menu-contact-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="#">0676 / 88 794 505</a></li>
+</ul></div>       			</p>
+       		 </div>
+                      <div class="clear"></div>
+       </div>
+       <div class="clear"></div>
+    </section>
+       
+
+
+
+
+
+
+ 
+       
+   <section class="overview">
+      <div class="lonelaner">  
+       <div class="overview_img">
+       		 <img src='./wp-content/plugins/Film Details Plugin/images/onthe.jpg' width='254' height='378'>        </div>
+        <div class="over_view_content">
+        <h1>OmU: Murder on the Orient Express</h1>
+        <p style="margin-bottom:10px">Drama, Krimi, Mystery | 114 Minuten | Englisch mit deutschen Untertitel | ab 14 Jahren   | Digital  | ab 15-01-2018</p>
+        
+        <div style="float:left;">
+                    	<p><span>Darsteller : </span>
+                Kenneth Branagh, Daisy Ridley, Johnny Depp, Judi Dench, Olivia Colman, Penélope Cruz, Willem Dafoe, Michelle Pfeiffer, Josh Gad, Leslie Odom Jr., Derek Jacobi, Marwan Kenzari </p>
+                         
+            <br/>
+            <p><span>Regie : </span>
+                Kenneth Branagh</p>
+            
+        </div>
+        <div style="float:left;margin-top: 3%;">
+        	<p style="text-align:justify;"><span>Beschreibung : </span>
+                Was als luxuriöse Zugfahrt durch Europa beginnt, entwickelt sich schnell zu einer der stilvollsten, spannendsten und aufregendsten Mysterien, die je erzählt wurden. Basierend auf dem Buch der Bestsellerautorin Agatha Christie, erzählt MORD IM ORIENT EXPRESS die Geschichte von dreizehn Fremden in einem Zug, von denen jeder ein Verdächtigter ist. Ein Mann muss gegen die Zeit ankämpfen, das Rätsel zu lösen, bevor der Mörder noch einmal zuschlägt.</p>
+           
+        </div>
+        <div class="clear"></div>
+         
+         <p><span>Beginnzeiten heute:</span></p>
+       <p class='time'>15-01-2018 - 18:15</p>     </br>    <div>
+         	<div class="fb-like" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+         </div>
+
+       
+        
+       <div style="width:100px;height:15px;margin-top:30px;">
+<span class='st_sharethis' style="float: left;display: block;height: 16px;width: 16px;"></span><span class='st_facebook' style="float: left;display: block;height: 16px;width: 16px;margin-left:10px;"></span><span class='st_email' style="float: left;display: block;height: 16px;width: 16px;margin-top:-12px;margin-left:10px;"></span>
+         </div>
+
+        </div>
+       </div>
+       <div class="lonelaner_trailer">
+                      <div class="grey">
+       		<h2 style="color:#fff;"><a href='https://www.youtube.com/watch?v=Iy566_Nn7lc' target='_blank'><font color="#fff">Zum Trailer</font></a></h2>
+</div>
+                  			        		
+      		 <div class="yellow">
+      		 	<p>
+      	 			Ticket-Reservierungen unter:
+	   				<div class="menu-menu-contact-container"><ul id="menu-menu-contact-2" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="#">0676 / 88 794 505</a></li>
+</ul></div>       			</p>
+       		 </div>
+                      <div class="clear"></div>
+       </div>
+       <div class="clear"></div>
+    </section>
+       
+
+
+
+            <div class="pagination">
+            
+             
+                        </div>
+                        <div class="clear"></div>
+                                
+</div>
+       <div class="clear"></div>
+        
+<script>
+    $('#main-slider').liquidSlider();
+
+    /* If you need to access the internal property or methods, use this:
+    var api = $.data( $('#slider-id')[0], 'liquidSlider');
+    */
+</script>
+<footer>
+        	<div class="footer_head">
+            	<div class="menu-menu_copyrit-container"><ul id="menu-menu_copyrit" class="menu"><li id="menu-item-902" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-902"><a href="http://www.kino-gmunden.at">©Kino Gmunden |</a></li>
+<li id="menu-item-953" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-953"><a href="http://www.kino-gmunden.at/?page_id=27&#038;page=-1">Kinoprogramm |</a></li>
+<li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904"><a href="http://www.kino-gmunden.at/?page_id=870">Über uns |</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://www.kino-gmunden.at/?page_id=50">Kontakt</a></li>
+</ul></div>                <span><div class="menu-menu_intenetservice-container"><ul id="menu-menu_intenetservice" class="menu"><li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68"><a title="DI (FH) Gerald Kaltenbrunner" target="_blank" href="http://www.gerald-kaltenbrunner.at">By Gerald Kaltenbrunner</a></li>
+</ul></div></span>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="footer-last">
+            <ul>
+            <h4>Kino Gmunden</h4>
+            	<div class="menu-menu-footer1-container"><ul id="menu-menu-footer1" class="menu"><li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899"><a href="http://www.kino-gmunden.at/?page_id=75">Das Kino</a></li>
+<li id="menu-item-952" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-952"><a href="http://www.kino-gmunden.at/?page_id=27&#038;page=-1">Kinoprogramm</a></li>
+<li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901"><a href="http://www.kino-gmunden.at/?page_id=50">Kontakt Kino Gmunden</a></li>
+</ul></div>            </ul>
+            
+            <ul>
+            <h4>Kinowerbung</h4>
+            	<div class="menu-menu-footer2-container"><ul id="menu-menu-footer2" class="menu"><li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896"><a href="http://www.kino-gmunden.at/?page_id=855">Gutscheine</a></li>
+<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897"><a href="http://www.kino-gmunden.at/?page_id=853">Kindergeburtstag</a></li>
+<li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898"><a href="http://www.kino-gmunden.at/?page_id=851">Zeiten &#038; Preise</a></li>
+</ul></div>            </ul>
+           
+            	 <p style="text-align: center;"><strong>Kino Gmunden – Großes Kino inmitten der Kulturstadt Gmunden!<br />
+</strong><strong>Martin Apfler und sein Team freuen sich auf Ihr Kommen – bis bald!</strong></p>
+<p>&nbsp;</p>
+            </div>
+            
+            <div class="clear"></div>
+        </footer>
+        
+    </div> 
+	<script type='text/javascript' src='http://www.kino-gmunden.at/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.50.0-2014.02.05'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.kino-gmunden.at\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.kino-gmunden.at/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://www.kino-gmunden.at/wp-includes/js/comment-reply.min.js?ver=3.9.22'></script>
+<script type='text/javascript' src='http://www.kino-gmunden.at/wp-includes/js/masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://www.kino-gmunden.at/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://www.kino-gmunden.at/wp-content/themes/king/js/functions.js?ver=2013-07-18'></script>
+
+</body>
+</html>

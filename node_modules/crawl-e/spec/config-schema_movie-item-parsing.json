@@ -1,0 +1,25 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_movie-item-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "allOf": [
+    {
+      "properties": {
+        "id": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the movie's id"
+        },
+        "title": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the movie's localized title"
+        },
+        "titleOriginal": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the movie's original title"
+        }
+      }
+    },
+    {
+      "$ref": "config-schema_version-item-parsing.json"
+    }
+  ]
+}

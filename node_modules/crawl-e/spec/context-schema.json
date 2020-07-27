@@ -1,0 +1,91 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/context-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "description": "Object that get's passed around to provide in various iterations\nE.g. gives access to current crawled cinema or the date it currently iterates thouhg",
+  "properties": {
+    "requestUrl": {
+      "description": "The URL of the currently parsed web page",
+      "type": "string"
+    },
+    "auditorium": {
+      "description": "The title of the auditorium showtimes are shown in",
+      "type": "string"
+    },
+    "cinema": {
+      "$ref": "cinema-schema.json",
+      "description": "The cinema showtimes are crawled for, either from static config or retrieved via cinema list crawling"
+    },
+    "isTemporarilyClosed": {
+        "type": "boolean",
+        "description": "Flag that indicates if a cinema is temporarirly clsoed."
+    },
+    "date": {
+      "type": "Moment",
+      "description": "The date of the showtimes (without time). Retrieved either from iterating date boxes or the date of the url request."
+    },
+    "dateHref": {
+      "type": "string",
+      "description": "The date page's href, relative link or absolute url in case of cinemas publishing showtimes on dynamicly crawled date pages"
+    },
+    "movie": {
+      "$ref": "movie-schema.json",
+      "description": "The movie a showtime is for"
+    },
+    "version": {
+      "$ref": "version-schema.json",
+      "description": "Map of attributes for the movies version"
+    },
+    "indexes": {
+      "description": "Current indexes of iterations",
+      "properties": {
+        "page": {
+          "type": "number",
+          "description": "On pagination, the index of the current page"
+        },
+        "tab": {
+          "type": "number",
+          "description": "When parsing tabs, the index of the current tab or card"
+        },
+        "table": {
+          "$ref": "table-cell-reference-schema.json",
+          "description": "Reference of the current table cell"
+        }
+      },
+      "type": "object"
+    },
+    "page": {
+      "description": "on static pagination: the current pages value",
+      "type": "string"
+    },
+    "period": {
+      "description": "List of dates covering the current program period",
+      "type": "array",
+      "items": {
+        "type": "Moment"
+      }
+    },
+    "tabId": {
+      "description": "When parsing tabs, the identifier of the current tab, to find the corresponding content container",
+      "type": "string"
+    },
+    "resource": {
+      "description": "The resource currently worked on. Provides additional context for implementing hooks or mappers",
+      "type": "string",
+      "enum": [
+        "CinemaList",
+        "CinemaDetails",
+        "MovieList",
+        "MovieDetails",
+        "Showtimes"
+      ]
+    },
+    "callstack": {
+      "description": "Stack trace of internal methods. Provides additional context for implementing hooks or mappers",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "type": "object"
+}

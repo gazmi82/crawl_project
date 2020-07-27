@@ -1,0 +1,114 @@
+.layout-examples * {
+  border: 1px dotted lightgray;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.layout-examples div {
+  margin: 5px;
+  padding: 5px;  
+}
+
+.layout-examples *::before {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8em;
+}
+
+.layout-examples h1 {
+  margin-top: 3em;
+}
+
+.layout-examples h1:first-of-type {
+  margin-top: inherit;
+}
+
+.layout-examples .container {
+  border: 1px solid gray; 
+  background: rgba(128, 128, 128, 0.15);
+  margin-bottom: 5%
+}
+
+.layout-examples .cinema {  
+  border: 1px solid blue;
+  background: lightblue;
+}
+
+.layout-examples .cinema::before {
+  content: 'cinema';
+}
+
+.layout-examples .movie {  
+  border: 1px solid green;
+  background: lightseagreen;
+}
+
+.layout-examples .movie::before {
+  content: 'movie ';
+}
+
+.layout-examples .day, 
+.layout-examples .date, 
+.layout-examples .dates a {  
+  border: 1px solid brown;
+  background: orange;
+}
+
+.layout-examples .day::before,
+.layout-examples .date::before {
+  content: 'date ';
+}
+
+.layout-examples .time {
+  border: 1px solid red;
+  background: rgba(255,0,0,0.2);
+}
+
+.layout-examples .time:before {
+  content: 'time'
+}
+
+.layout-examples .auditorium {  
+  border: 1px dotted blueviolet;
+  background: violet
+}
+
+.layout-examples .auditorium::before {
+  content: 'auditorium ';
+}
+
+.layout-examples .showtimes {  
+  border: 1px dotted pink;
+  background: lightpink
+}
+
+.layout-examples .showtimes::before {
+  content: 'showtimes container';
+}
+
+.layout-examples li {
+  list-style: none;
+}
+
+.layout-examples .showtimes li, 
+.layout-examples .showtimes a, 
+.layout-examples .showtimes span, 
+.layout-examples .showtimes p {
+  margin: 2px;
+  padding: 3px;
+  border: 1px dotted red;
+  background: red;
+  color: white;
+}
+
+
+.layout-examples table, 
+.layout-examples table td {
+  border: 1px solid black;
+  border-radius: 0;
+  margin: 0;  
+}
+
+.layout-examples table td {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

@@ -1,0 +1,30 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_movies-crawling.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for movies crawling",
+  "type": "object",
+  "required": [
+    "list"
+  ],      
+  "properties": {
+    "list": {
+      "type": "object",
+      "description": "Config for crawling the movie list.",
+      "allOf": [
+        {
+          "$ref": "config-schema_list-crawling.json"
+        },
+        {
+          "$ref": "config-schema_movie-item-parsing.json"
+        },
+        {
+          "$ref": "config-schema_language-parsing.json"
+        }
+      ]
+    },
+    "showtimes": {
+      "description": "Configuration for requesting showtimes pages and parsing them in the context of a movie.",
+      "$ref": "config-schema_showtimes-crawling.json"
+    }
+  }
+}

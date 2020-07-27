@@ -1,0 +1,44 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_cinemas-dynamic.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for dynamic cinemas",
+  "type": "object",
+  "required": [
+    "list"
+  ],
+  "properties": {
+    "list": {
+      "type": "object",
+      "description": "Config for crawling the cinemas list",
+      "allOf": [
+        {
+          "$ref": "config-schema_list-crawling.json"
+        },
+        {
+          "$ref": "config-schema_cinema-item-parsing.json"
+        }
+      ]
+    },
+    "details": {
+      "type": "object",
+      "description": "Config for crawling cinema details from a page per cinema",
+      "allOf": [
+        {
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "URL template for crawling details of a single cinema"
+            },
+            "postData": {
+              "type": [ "string", "object" ],
+              "description": "Template for building post body. Either as parameters string or JSON object. Automatically turns requests into POST instead of GET requests."
+            }
+          }
+        },
+        {
+          "$ref": "config-schema_cinema-item-parsing.json"
+        }
+      ]
+    }
+  }
+}

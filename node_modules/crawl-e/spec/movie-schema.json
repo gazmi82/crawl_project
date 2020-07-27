@@ -1,0 +1,26 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/movie-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "href": {
+      "description": "The movie's href, relative link or absolute url in case of cinemas publishing showtimes on movie pages",
+      "type": "string"
+    },
+    "id": {
+      "description": "Id of the movie used by the cinema's website",
+      "type": "string"
+    },
+    "title": {
+      "description": "The movie's localized title as displayed on the cinema's website",
+      "type": "string"
+    },
+    "titleOriginal": {
+      "description": "The movie's original title as displayed on the cinema's website",
+      "type": "string"
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "type": "object"
+}

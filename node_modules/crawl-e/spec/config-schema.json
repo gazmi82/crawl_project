@@ -1,0 +1,106 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema",
+  "type": "object",
+  "required": [
+    "cinemas"
+  ],
+  "properties": {
+    "concurrency": {
+      "type": "integer",
+      "description": "Specifies number of parallel execution .",
+      "default": 10
+    },
+    "proxyUri": {
+      "type": "string", 
+      "description": "URI to a proxy to make the requests through. Must include the protocol."
+    },
+    "useRandomUserAgent": {
+      "type": "boolean",
+      "description": "Specifies whether to use a random user-agent header for each single request.",
+      "default": true
+    },
+    "timezone": {
+      "type": "string",
+      "description": "Timezone to use for crawling. Important for iterating dates as the system timezone may be differnt from the targeted website.",
+      "example": "America/New_York"
+    },
+    "crawler": {
+      "description": "General configuration about the crawler",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The crawler's id. It is used for building the output filenames and determined automatically from the scrip's file name if omitted."
+        },
+        "is_booking_link_capable": {
+          "type": "boolean",
+          "description": "Specifies whether the crawler is capable of scraping booking links. The capabilty reflects the SHOULD value, which may differ from the resulting showtimes actaully including booking links. If omitted the booking link capability will be determined automatically. Hence it should not be specified unless the framework asks for it through warnings."
+        }, 
+        "jira_issues": {
+          "description": "A list of Jira issue keys which the crawler has been worked on.",
+          "example": "['CRAW-4711', 'CRAW-0815']",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "[A-Z]+-\\d+"
+          }
+        }
+      }
+    },
+    "acceptedWarnings": {
+      "type": "object",
+      "description": "Map of warnings to be ignored / accepted for a specific reason.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "isTemporarilyClosed": {
+      "description": "Crawling config to determine globally whether a cinema or chain is temporarily closed.",
+      "$ref": "config-schema_is-temporarily-closed-crawling.json"
+    },
+    "cinemas": {
+      "description": "Either static list of cinemas or configuration object for dynamic cinema crawling.",
+      "oneOf": [
+        {
+          "type": "array",
+          "description": "Static list of cinemas as crawler input",
+          "items": {
+            "$ref": "cinema-schema.json"
+          }
+        },
+        {
+          "$ref": "config-schema_cinemas-dynamic.json"
+        }
+      ]        
+    },
+    "movies": {
+      "description": "Configuration for requesting movie pages and parsing them.",
+      "$ref": "config-schema_movies-crawling.json"
+    },
+    "dates": {
+      "description": "Configuration for requesting movie pages and parsing them.",
+      "$ref": "config-schema_dates-crawling.json"
+    },
+    "showtimes": {
+      "description": "Configuration for requesting showtimes pages and parsing them.",
+      "oneOf": [
+        { 
+          "$ref": "config-schema_showtimes-crawling.json" 
+        },
+        { 
+          "type": "array", 
+          "items": {
+            "$ref": "config-schema_showtimes-crawling.json"  
+          }
+        }
+      ]
+      
+    },
+    "hooks": {
+      "description": "Optional object of hook functions to patch or enhance the framework's default behaviour.",
+      "$ref": "config-schema_hooks.json"
+    }
+  }
+}

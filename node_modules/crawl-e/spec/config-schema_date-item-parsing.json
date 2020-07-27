@@ -1,0 +1,17 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_date-item-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "allOf": [
+    {
+      "properties": {
+        "date": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the date string."
+        }        
+      }
+    },
+    {
+      "$ref": "config-schema_date-string-parsing.json"
+    }
+  ]
+}

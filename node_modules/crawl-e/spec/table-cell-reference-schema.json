@@ -1,0 +1,19 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/table-cell-reference-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "col": {
+      "description": "cell's row index",
+      "type": "integer"
+    },
+    "row": {
+      "description": "cell's row index",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "col",
+    "row"
+  ],
+  "type": "object"
+}

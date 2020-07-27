@@ -1,0 +1,54 @@
+
+pre[data-lang=bash], 
+code.language-bash,
+pre[data-lang=shell], 
+code.language-shell {
+  color: white !important;
+	background: #4d555d !important;
+
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[data-lang=javascript] {
+  border-left: 2px solid #e96900aa;
+} 
+
+pre[data-lang=javascript]::after {
+  color: #e96900aa;
+} 
+
+pre[data-lang=json] {
+  border-left: 2px solid #525252aa;
+} 
+
+pre[data-lang=json]::after {
+  color: #525252aa;
+} 
+
+
+.line-highlight {
+	margin-top: 2.2em !important; /* override to match vue styles */
+}
+
+	/* overrides to match vue styles */
+	.line-highlight:before {
+		top: 0.6em a!important;
+	}
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		box-shadow: none !important;
+		padding-top: 0.15em !important;
+	}

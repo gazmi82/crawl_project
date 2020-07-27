@@ -1,0 +1,10 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_auditorium-item-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "auditorium": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the auditorum's title string"
+    }
+  }
+}

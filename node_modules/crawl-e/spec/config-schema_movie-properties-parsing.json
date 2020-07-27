@@ -1,0 +1,14 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_movie-properties-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "movieTitle": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the showtime's movie localized title."
+    },
+    "movieTitleOriginal": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the showtime's movie original title."
+    }
+  }
+}

@@ -15,21 +15,6 @@
   "showtimes": [
     {
       "movie_title": "The Gentlemen",
-      "start_at": "2020-07-26T20:30:00",
-      "is_3d": false
-    },
-    {
-      "movie_title": "Harriet - Der Weg in die Freiheit",
-      "start_at": "2020-07-26T18:00:00",
-      "is_3d": false
-    },
-    {
-      "movie_title": "Blues Brothers",
-      "start_at": "2020-07-26T20:30:00",
-      "is_3d": false
-    },
-    {
-      "movie_title": "The Gentlemen",
       "start_at": "2020-07-27T20:30:00",
       "is_3d": false
     },

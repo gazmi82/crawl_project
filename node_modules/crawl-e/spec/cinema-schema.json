@@ -1,0 +1,57 @@
+{
+    "id": "http://crawl-e.cinepass.de/schemas/cinema-schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Definition for staticly configured cinemas.",
+    "properties": {
+        "address": {
+            "description": "The full address as of the cinema",
+            "type": "string"
+        },
+        "email": {
+            "description": "eMail address of the cinema",
+            "type": "string"
+        },
+        "href": {
+            "description": "The cinema's href, relative link or absolute url in case of cinemas publishing showtimes on movie pages",
+            "type": "string"
+        },
+        "id": {
+            "description": "Identifier as of the crawled website",
+            "type": "string"
+        },
+        "is_temporarily_closed": {
+            "description": "Indicates whether the cinema is temporarirly clsoed",
+            "type": "boolean"
+        },
+        "lat": {
+            "description": "latitude of the cinemas geo location",
+            "type": "number"
+        },
+        "lon": {
+            "description": "longitude of the cinemas geo location",
+            "type": "number"
+        },
+        "name": {
+            "description": "Name or title of the cinemas as it appears on the source website",
+            "type": "string"
+        },
+        "phone": {
+            "description": "Telephone number is a human-readable format",
+            "type": "string"
+        },
+        "slug": {
+            "description": "slug identifier for creation of the cinema's output file",
+            "type": "string"
+        },
+        "website": {
+            "description": "URL to the cinema's website",
+            "type": "string"
+        }
+    },
+    "required": [
+        "address",
+        "name"
+    ],
+    "type": "object"
+}
+

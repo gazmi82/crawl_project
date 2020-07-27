@@ -1,0 +1,33 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/version-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "attributes": {
+      "description": "Arbitrary list of the movie's version attributes",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "is3d": {
+      "description": "Flag whether the movie's showtimes are in 3D",
+      "type": "boolean"
+    },
+    "isImax": {
+      "description": "Flag whether the movie's showtimes are in IMAX",
+      "type": "boolean"
+    },
+    "language": {
+      "description": "The movie's / it's showtimes spoking language",
+      "type": "string"
+    },
+    "subtitles": {
+      "description": "The movie's / it's showtimes subtitle languages",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

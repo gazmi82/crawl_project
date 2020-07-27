@@ -1,0 +1,20 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_is-temporarily-closed-crawling.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for is_temporarily_closed crawling",
+  "type": "object",
+  "required": [
+    "url", 
+    "grabber"
+  ],
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "The url to crawler for checking is temporarily closed."
+    },
+    "grabber": {
+      "type": "ValueGrabber",
+      "description": "Value Grabbing config for parsing the page for closing statement. The result will be checked for truthiness."
+    }
+  }
+}

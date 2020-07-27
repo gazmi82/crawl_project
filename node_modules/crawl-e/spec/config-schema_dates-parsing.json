@@ -1,0 +1,59 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_dates-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for dates parsing",
+  "type": "object",
+  "oneOf": [
+    { "required": [ "box", "date"] },
+    { "required": [ "parser" ] }
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "box": {
+          "type": "string",
+          "description": "Selector for date boxes"
+        }
+      }
+    },
+    {
+      "properties": {
+        "parser": {
+          "description": "Replacement hook for parsing the dates container",
+          "typeof": "function"
+        }
+      }
+    },
+    {
+      "$ref": "config-schema_date-item-parsing.json"
+    },
+    {
+      "properties": {
+        "movies": {
+          "description": "Configuration for parsing movies inside a date box",
+          "$ref": "config-schema_movies-parsing.json"
+        },
+        "auditoria": {
+          "description": "Configuration for parsing auditoria inside a date box",
+          "$ref": "config-schema_auditoria-parsing.json"
+        },
+        "versions": {
+          "description": "Configuration for parsing versions inside a date box",
+          "$ref": "config-schema_versions-parsing.json"
+        },
+        "showtimes": {
+          "description": "Configuration for parsing showtimes inside a date box",
+          "$ref": "config-schema_showtimes-parsing.json"
+        },
+        "forEach": {
+          "description": "Configuration for iterating arbitray boxes inside a date box",
+          "$ref": "config-schema_forEach-parsing.json"
+        },
+        "tabs": {
+          "description": "Configuration for parsing tabs inside a date box",
+          "$ref": "config-schema_tabs-parsing.json"
+        }
+      }
+    }
+  ]  
+}

@@ -1,0 +1,79 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_showtime-item-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "allOf": [
+    {
+      "properties": {
+        "time": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the showtime's time (without the date). Defaults to the showtime box's text if omitted"
+        },
+        "timeFormat": {
+          "type": [
+            "string",
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "description": "Format(s) for parsing a time string selected by the `time` ValueGrabber",
+          "default": "HH:mm"
+        },
+        "timeLocale": {
+          "type": "string",
+          "description": "Locale for parsing a time string. (Specified as [ISO 639 code](http://www.localeplanet.com/icu/iso639.html))"
+        },
+        "date": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the showtime's date (without the time), Defaults to the showtime box's text if omitted"
+        }
+      }
+    }, 
+    {
+      "$ref": "config-schema_date-string-parsing.json"
+    }, 
+    {
+      "properties": {
+        "datetime": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the showtime's date and time together in one string"
+        },
+        "datetimeParsing": {
+          "type": "boolean",
+          "description": "Flag to skip parsing of the grabbed datetime string and using directly it as `start_at` value",
+          "default": true
+        },
+        "datetimeFormat": {
+          "type": ["string", "array"],
+          "items": {
+            "type": "string"
+          },
+          "description": "Format(s) for parsing a string containing both date and time. "
+        },
+        "datetimeLocale": {
+          "type": "string",
+          "description": "Locale for parsing a date or time string. Combines `dateLocale` & `timeLocale` into one property. (Specified as [ISO 639 code](http://www.localeplanet.com/icu/iso639.html))"
+        },
+        "bookingLink": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the showtime's booking link"
+        },
+        "auditorium": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the showtime's auditorium"
+        },
+        "movieTitle": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the showtime's movie localized title. Only relavant in cases of showtimes boxes not surrounded in a movie's context and therefor holding the movie title itsself"
+        },
+        "movieTitleOriginal": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the showtime's movie original title. Only relavant in cases of showtimes boxes not surrounded in a movie's context and therefor holding the movie title itsself"
+        }
+      }
+    },
+    {
+      "$ref": "config-schema_version-item-parsing.json"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/location-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "type": "object",
+  "required": [
+    "lat",
+    "lon"
+  ],
+  "properties": {
+    "lat": {
+      "description": "latitude of the geo location",
+      "type": "number"
+    },
+    "lon": {
+      "description": "longitude of the geo location",
+      "type": "number"
+    }
+  }
+}

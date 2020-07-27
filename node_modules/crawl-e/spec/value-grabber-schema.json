@@ -1,0 +1,18 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/value-grabber-schema.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "description": "Either static list of cinemas or configuration object for dynamic cinema crawling.",
+  "oneOf": [
+    {
+      "type": "string",
+      "description": "short handle"          
+    },
+    {
+      "$ref": "value-grabber-extensive-schema.json"
+    }, 
+    {
+      "typeof": "function",
+      "description": "Custom implementation"
+    }
+  ]
+}

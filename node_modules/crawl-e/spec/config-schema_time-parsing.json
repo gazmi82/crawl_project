@@ -1,0 +1,18 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_time-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "time": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the time string"
+    },
+    "timeFormat": {
+      "type": ["string", "array"],
+      "items": {
+        "type": "string"
+      },
+      "description": "Format(s) for parsing a time string selected by the `time` ValueGrabber",
+      "default": "HH:mm"
+    }
+  }
+}

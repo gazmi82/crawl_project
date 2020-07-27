@@ -1,0 +1,36 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_showtimes-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for movies parsing",
+  "type": "object",
+  "oneOf": [
+    { "required": [ "box"] },
+    { "required": [ "parser" ] }
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "box": {
+          "type": "string",
+          "description": "Selector for showtime boxes"
+        },
+        "parser": {
+          "description": "Replacement hook for parsing the showtimes container",
+          "typeof": "function"
+        },
+        "delimiter": {
+          "type": [ "string", "object" ],
+          "description": "Used when multiple showtimes are placed all in one DOM node. This delimiter separates them, similar to splitting a string into an array",
+          "examples": "<br>"
+        },
+        "dates": {
+          "type": "ValueGrabber",
+          "description": "Custom value grabbing function to parse a list of dates from a showtimes container"
+        }
+      }
+    },
+    {
+      "$ref": "config-schema_showtime-item-parsing.json"
+    }
+  ]
+}

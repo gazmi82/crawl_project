@@ -1,0 +1,25 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_version-item-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "allOf": [
+    {
+      "properties": {
+        "attributes": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the movie's / showtimes's version attributes"
+        },
+        "is3d": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the movie's / showtimes's `is_3d` flag"
+        },
+        "isImax": {
+          "type": "ValueGrabber",
+          "description": "Value Grabber for the movie's / showtimes's `is_imax` flag"
+        }
+      }
+    },
+    {
+      "$ref": "config-schema_language-parsing.json"
+    }
+  ]
+}

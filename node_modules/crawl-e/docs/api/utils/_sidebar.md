@@ -1,0 +1,17 @@
+- [<div class="ps-icon ps-icon-arrow-right"></div>Getting started](quickstart)  
+- [<div class="ps-icon ps-icon-book"></div>Tutorials](tutorials/kino-gmunden.at)
+- [<div class="ps-icon ps-icon-wand"></div>Advanced](advanced/post-requests.md)
+- [<div class="ps-icon ps-icon-puzzle"></div>API Reference](api)
+  - [Models](/api)
+  - [Control Flow](/api)
+  - [Hooks](/api/hooks/)
+  - [Utility Functions](/api/utils/)  
+    - [`addBoxes()`](/api/utils/addBoxes.md)
+    - [`mapLanguage()`](/api/utils/languageMappers?id=mapLanguage)
+    - [`mapSubtitles()`](/api/utils/languageMappers?id=mapSubtitles)
+    - [`matchLanguage()`](/api/utils/languageMappers?id=matchLanguage)
+    - [`matchSubtitles()`](/api/utils/languageMappers?id=matchSubtitles)
+    - [`parseDates()`](/api/utils/parseDates.md)
+    - [`parseMapsUrl()`](/api/utils/parseMapsUrl.md)
+    
+

@@ -1,0 +1,46 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_cinema-item-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "properties": {
+    "id": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's id"
+    },
+    "href": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinemas's href, which should contain a path string relative to the webiste's base url."
+    },
+    "slug": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's slug"
+    },
+    "name": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's name"
+    },
+    "address": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's address"
+    },
+    "phone": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's phone"
+    },
+    "email": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's email"
+    },
+    "website": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's website"
+    },
+    "location": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber for the cinema's geo locaction"
+    },
+    "isTemporarilyClosed": {
+      "type": "ValueGrabber",
+      "description": "Value Grabber to check whether the cinema is temporarily closed."
+    }
+  }
+}

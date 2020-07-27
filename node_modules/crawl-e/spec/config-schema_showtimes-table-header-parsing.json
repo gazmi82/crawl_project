@@ -1,0 +1,32 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_showtimes-table-header-parsing.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "allOf": [
+    {
+      "$ref": "config-schema_date-item-parsing.json"
+    },
+    { 
+      "properties": {
+        "dates": {
+          "type": "ValueGrabber",
+          "description": "Custom value grabbing function to parse a list of dates from a header cell"
+        }
+      }
+    },
+    {
+      "$ref": "config-schema_time-parsing.json"
+    },
+    {
+      "$ref": "config-schema_movie-properties-parsing.json"
+    },
+    {
+      "$ref": "config-schema_version-item-parsing.json"
+    },
+    {
+      "$ref": "config-schema_language-parsing.json"
+    },
+    {
+      "$ref": "config-schema_auditorium-item-parsing.json"
+    }
+  ]
+}

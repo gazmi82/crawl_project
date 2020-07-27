@@ -1,0 +1,58 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_list-crawling.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "type": "object",
+    "description": "Config for crawling a list.",
+    "oneOf": [
+      {
+        "required": [
+          "url"
+        ]
+      },
+      {
+        "required": [
+          "urls"
+        ]
+      }
+    ],
+    "allOf": [
+      {
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL Template for request to the list page."
+          },
+          "urls": {
+            "type": "array",
+            "description": "List of URL templates for requests to the list pages.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "postData": {
+            "type": [
+              "string",
+              "object"
+            ],
+            "description": "Template for building post body. Either as parameters string or JSON object. Automatically turns requests into POST instead of GET requests."
+          },
+          "box": {
+            "type": "string",
+            "description": "Selecotor for picking a single item's box"
+          },
+          "nextPage": {
+            "type": "ValueGrabber", 
+            "description": "for Pagination: ValueGrabber for the next page href or url"
+          }
+        }
+      },
+      {
+        "properties": {
+          "href": {
+            "type": "ValueGrabber",
+            "description": "Value Grabber for the item's href, which should contain a path string relative to the webiste's base url."
+          }
+        }
+      }
+    ]
+  }

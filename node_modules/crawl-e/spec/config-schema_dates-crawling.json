@@ -1,0 +1,23 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_dates-crawling.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for dates crawling",
+  "type": "object",
+  "required": [
+    "list"
+  ],
+  "properties": {
+    "list": {
+      "type": "object",
+      "description": "Config for crawling the dates list",
+      "allOf": [
+        { "$ref": "config-schema_list-crawling.json" },
+        { "$ref": "config-schema_date-item-parsing.json" }
+      ]
+    },
+    "showtimes": {
+      "description": "Configuration for requesting showtimes pages and parsing them in the context of a movie",
+      "$ref": "config-schema_showtimes-crawling.json"
+    }
+  }
+}

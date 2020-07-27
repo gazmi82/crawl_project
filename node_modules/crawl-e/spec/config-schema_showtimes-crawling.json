@@ -1,0 +1,95 @@
+{
+  "id": "http://crawl-e.cinepass.de/schemas/config-schema_showtimes-crawling.json",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Config Schema for showtimes crawling",
+  "type": "object",
+  "oneOf": [
+    { "required": [ "url" ] },
+    { "required": [ "urls" ] }
+  ],
+  "properties": {
+    "url": {
+      "type": "string", 
+      "description": "URL Template for request to the showtimes pages."
+    },
+    "urls": {
+      "type": "array",
+      "description": "Same as `url` but providing multiple urls.",
+      "items": {
+        "type": "string",
+        "description": "URL Template for request to the showtimes pages."
+      }
+    },
+    "urlDateFormat": {
+      "type": "string", 
+      "description": "Date Format for filling :date: parameters in url or post data templates."
+    },
+    "urlDateCount": {
+      "type": "integer",
+      "description": "Number of days to crawler with :date: parameter in url or post data templates.",
+      "default": 14
+    },
+    "postData": {
+      "type": ["string", "object"],
+      "description": "Template for building post body. Either as parameters string or JSON object. Automatically turns requests into POST instead of GET requests."
+    },
+    "preserveLateNightShows": {
+      "type": "boolean",
+      "description": "Disables time correction of late night showtimes. See [late night showtimes parsing](api/showtimes?id=late-night-showtimes).",
+      "default": false
+    },
+    "period": {
+      "type": "object",
+      "description": "Configuration for parsing program period", 
+      "allOf": [
+        {
+          "properties": {
+            "dates": {
+              "type": "ValueGrabber",
+              "description": "Custom value grabbing function to parse a list of dates covering the current programm period, e.g. a play week."
+            }
+          }
+        },
+        {
+          "$ref": "config-schema_date-string-parsing.json"
+        }
+      ]
+    },
+    "versions": {
+      "description": "Configuration for parsing movie versions on showtime pages.",
+      "$ref": "config-schema_versions-parsing.json"
+    },
+    "auditoria": {
+      "description": "Configuration for parsing auditoria on showtime pages.",
+      "$ref": "config-schema_auditoria-parsing.json"
+    },
+    "movies": {
+      "description": "Configuration for parsing movies on showtime pages.",
+      "$ref": "config-schema_movies-parsing.json"
+    },
+    "dates": {
+      "description": "Configuration for parsing dates on showtime pages.",
+      "$ref": "config-schema_dates-parsing.json"
+    },
+    "periods": {
+      "description": "Configuration for parsing date periods on showtime pages.",
+      "$ref": "config-schema_periods-parsing.json"
+    },    
+    "forEach": {
+      "description": "Configuration for iterating arbitray boxes on showtime pages.",
+      "$ref": "config-schema_forEach-parsing.json"
+    },
+    "showtimes": {
+      "description": "Configuration for parsing showtimes on showtime pages.",
+      "$ref": "config-schema_showtimes-parsing.json"
+    },
+    "table": {
+      "description": "Configuration for parsing a showtimes table on showtime pages.",
+      "$ref": "config-schema_showtimes-table-parsing.json"
+    },
+    "tabs": {
+      "description": "Configuration for parsing a showtimes tabs on showtime pages.",
+      "$ref": "config-schema_tabs-parsing.json"
+    }
+  }
+}
